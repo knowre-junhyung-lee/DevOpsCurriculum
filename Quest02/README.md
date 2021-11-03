@@ -44,7 +44,7 @@ $ node quest02.js 5
 ```
 
 ```
-
+소스 코드
 
 let number = process.argv[2];
 
