@@ -91,6 +91,12 @@ MAC 주소를 알고 있다면 게이트웨이로 바로 전송합니다.
     * 마지막 HTTP 패킷은 수신되어 웹 브라우저에서 확인이 되지만 TLS 로 암호화되어 확인이 불가합니다.
 * telnet 명령을 통해 `http://www.google.com/` URL에 HTTP 요청을 날려 보세요.
   * 어떤 헤더들이 있나요?
+    * HTTP/1.0 400 Bad Request
+      Content-Type: text/html; charset=UTF-8
+      Referrer-Policy: no-referrer
+      Content-Length: 1555
+      Date: Wed, 03 Nov 2021 07:17:26 GMT. 
+      
   * 그 헤더들은 어떤 역할을 하나요?
 
 ## Advanced
