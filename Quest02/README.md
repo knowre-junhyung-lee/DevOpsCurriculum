@@ -44,7 +44,7 @@ $ node quest02.js 5
 ```
 
 ```
-$ node quest02.js 5
+
 
 let number = process.argv[2];
 
