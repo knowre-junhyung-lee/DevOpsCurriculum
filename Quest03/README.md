@@ -92,13 +92,25 @@ MAC 주소를 알고 있다면 게이트웨이로 바로 전송합니다.
 * telnet 명령을 통해 `http://www.google.com/` URL에 HTTP 요청을 날려 보세요.
   * 어떤 헤더들이 있나요?
     * HTTP/1.0 400 Bad Request
-      Content-Type: text/html; charset=UTF-8
-      Referrer-Policy: no-referrer
-      Content-Length: 1555
-      Date: Wed, 03 Nov 2021 07:17:26 GMT. 
+    * Content-Type: text/html; charset=UTF-8
+    * Referrer-Policy: no-referrer
+    * Content-Length: 1555
+    * Date: Wed, 03 Nov 2021 07:17:26 GMT
       
   * 그 헤더들은 어떤 역할을 하나요?
-
+    * HTTP/1.0 400 Bad Request.  (HTTP 1.0 버젼, 상태 코드, 응답 매세지)
+    * Content-Type: text/html; charset=UTF-8   (콘텐츠의 형식 및 인코딩 타입)
+    * Referrer-Policy: no-referrer     (참조 정책)
+    * Content-Length: 1555             (콘텐츠 길이)
+    * Date: Wed, 03 Nov 2021 07:17:26 GMT   (날짜 정보)
+    * 
 ## Advanced
 * HTTP의 최신 버전인 HTTP/3는 어떤 식으로 구성되어 있을까요?
+  *  HTTP3 프로토콜은 기존 버젼과 달리 UDP 를 기반으로 한  QUIC 를 사용합니다.
+UDP 를 사용함으로써 오버헤드를 줄여 속도의 이점을 살렸습니다. 
+TCP 에서 보장하고 있던 부분인 신뢰성, 연결성, 암호화를 어플리케이션 프로토콜에서 구현한 프로토콜입니다.
+빠른 콘텐츠의 전달을 위해 CDN 에서 사용되고 있습니다.
 * TCP/IP 외에 전세계적인 네트워크를 구성하기 위한 다른 방식도 제안된 바 있을까요?
+  * 전송계층에서는 UDP 를 사용하는 경우도 있습니다.
+  * 데이터 링크 계층에서는 일반적으로 ethernet 을 사용하지만 무선랜, ATM 등의 프로토콜도 사용합니다.
+  * SAN 에서 사용하는 스토리지 네트워크에서는 FCP 라는 특수한 프로토콜을 사용하기도 합니다.
