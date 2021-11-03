@@ -43,34 +43,7 @@ $ node quest02.js 5
 *********
 ```
 
-```
-소스 코드
-
-let number = process.argv[2];
-
-if(number === undefined || number === "0"){
-    console.log("wrong input!!!!")
-    process.exit(1)
-}
-
-let whiteSpaceNumber = number -1;
-let starNumber = 1;
-
-for(let i = 0; i < number; i++) {
-    
-    for(let j = 0; j < whiteSpaceNumber; j++) {
-        process.stdout.write(" ");
-    }
-    for(let k = 0; k < starNumber; k++) {
-        process.stdout.write("*");
-    }
-
-    whiteSpaceNumber = whiteSpaceNumber - 1
-    starNumber = starNumber + 2
-    process.stdout.write("\n");
-}
-```
-
+  * 소스 코드 링크 : "https://github.com/knowre-junhyung-lee/devops/tree/master/Quest02"
 ## Advanced
 * 퀘스트의 코드를 더 구조화하고, 중복을 제거하고, 각각의 코드 블록이 한 가지 일을 전문적으로 잘하게 하려면 어떻게 해야 할까요?
   * 한가지 명확한 역할을 하는 함수를 작성하는 것입니다.
