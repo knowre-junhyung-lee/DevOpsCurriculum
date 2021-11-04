@@ -39,20 +39,27 @@
   
 * git의 clone/add/commit/push/pull/branch/stash 명령은 무엇이며 어떨 때 이용하나요? 그리고 어떻게 사용하나요?
 
-  * clone
-  
-  * add
-  
-  * commit
-  
-  * push
-  
-  * pull
-  
-  * branch
-
-  * stash
-  
+  * clone : 원격 레포지토리에 저장소를 복제해 오는 명령입니다.
+    * ex ) git clone https://github.com/[USERNAME]/[REPOSITORY_NAME].git
+    
+  * add : 작업디렉토리에서의 변경 내용을 스테이징 영역에 추가할 때 사용합니다.
+    * ex ) git add [디렉토리 | 파일명]
+    
+  * commit : git add 명령을 통해 스테이징 영역에 저장된 내용을 하나의 의미있는 변경분으로 생성합니다.
+    * ex ) git commit -m "커밋메세지"
+    
+  * push : 로컬저장소에 저장된 커밋들을 원격 레포지토리의 특정 브랜치에 적용합니다.
+    * ex ) git push [원격레포지토리명] [브랜치명]
+    
+  * pull : 원격레포지토리에서 새로 적용된 commit 을 로컬 저장소로 가져와서 적용합니다.
+    * ex ) git pull [원격레포지토리명] [브랜치명]
+    
+  * branch : 브랜치를 신규로 생성합니다.
+    * ex ) git branch [브랜치명]
+    
+  * stash : 마무리하지 않은 작업들을 임시로 저장하고 나중에 다시 작업할 수 있도록합니다.
+    * ex ) git stash
+    
 * git의 Object, Commit, Head, Branch, Tag는 어떤 개념일까요? git 시스템은 프로젝트의 히스토리를 어떻게 저장할까요?
 
   * Object
