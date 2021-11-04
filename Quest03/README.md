@@ -78,17 +78,20 @@ MAC 주소를 알고 있다면 게이트웨이로 바로 전송합니다.
  
   * 그 IP주소들은 어디에 위치해 있나요?
     * (서울특별시 용산구 한강대로32 LG u+), (Google LLC)
+    
 * Wireshark를 통해 `www.google.com` 으로 요청을 날렸을 떄 어떤 TCP 패킷이 오가는지 확인해 보세요
   * TCP 패킷을 주고받는 과정은 어떻게 되나요?
-    * 첫번째로 “www.google.com” 도메인에 대한 질의, 응답 패킷이 udp 로 주고 받습니다.
+    * 첫번째로 “www.google.com” 도메인에 대한 질의, 응답 패킷을 udp 로 주고 받습니다.
     * 두번째로 TCP three-way handshake 를 통해 TCP 세션을 성립합니다.
     * 세번째로 맺어진 TCP 세션을 통해 TLS 협상을 진행합니다.
     * 네번째로 HTTP 프로토콜을 통해서 “www.google.com” 도메인의 메인 페이지를 가져옵니다.
+    
   * 각각의 패킷의 헤더에 어떤 정보들이 담겨 있나요?
     * DNS 질의 응답 패킷에는 질의하는 레코드의 종류와 도메인, 해당하는 IP에 대한 정보가 담겨있습니다.
     * TCP three-way handshake 패킷에는 syn 플래그를 활성화하여 서버에게 보내고 syn , ack 플레그를 활설화하여 세션을 성립합니다.
     * TLS 협상 과정에서는 서로의 암호화 스팩에 대한 정보를 공유하며 정해진 스팩으로 암호화를 진행합니다.
     * 마지막 HTTP 패킷은 수신되어 웹 브라우저에서 확인이 되지만 TLS 로 암호화되어 확인이 불가합니다.
+    
 * telnet 명령을 통해 `http://www.google.com/` URL에 HTTP 요청을 날려 보세요.
   * 어떤 헤더들이 있나요?
     * HTTP/1.0 400 Bad Request
@@ -103,7 +106,7 @@ MAC 주소를 알고 있다면 게이트웨이로 바로 전송합니다.
     * Referrer-Policy: no-referrer     (참조 정책)
     * Content-Length: 1555             (콘텐츠 길이)
     * Date: Wed, 03 Nov 2021 07:17:26 GMT   (날짜 정보)
-    * 
+
 ## Advanced
 * HTTP의 최신 버전인 HTTP/3는 어떤 식으로 구성되어 있을까요?
   *  HTTP3 프로토콜은 기존 버젼과 달리 UDP 를 기반으로 한  QUIC 를 사용합니다.
