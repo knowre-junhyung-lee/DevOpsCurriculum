@@ -34,15 +34,38 @@
 
 * git과 GitHub은 어떻게 다를까요?
 
-  *
-* git의 clone/add/commit/push/pull/branch/stash 명령은 무엇이며 어떨 때 이용하나요? 그리고 어떻게 사용하나요?
-
   * git 은 소프트웨어 버젼 관리를 하기 위한 오픈 소스 소프트웨어입니다.
   * github 는 git 으로 관리되는 코드를 저장할 수 있는 git 레포지토리를 제공하는 서비스를 말합니다.
   
+* git의 clone/add/commit/push/pull/branch/stash 명령은 무엇이며 어떨 때 이용하나요? 그리고 어떻게 사용하나요?
+
+  * clone
+  
+  * add
+  
+  * commit
+  
+  * push
+  
+  * pull
+  
+  * branch
+
+  * stash
+  
 * git의 Object, Commit, Head, Branch, Tag는 어떤 개념일까요? git 시스템은 프로젝트의 히스토리를 어떻게 저장할까요?
 
-  *
+  * Object
+  
+  * Commit
+  
+  * Head
+  
+  * Branch
+  
+  * Tag
+  
+  
 * 리모트 git 저장소에 원하지 않는 파일이 올라갔을 때 이를 되돌리려면 어떻게 해야 할까요?
 
   *
