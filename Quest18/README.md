@@ -25,7 +25,17 @@
   * 다섯번째, RDBMS 와 달리 트랜잭션과, 롤백 기능을 제공하지 않습니다.
   
 * AWS의 ElasticSearch Service는 어떤 서비스인가요? ElasticSearch를 직접 설치하거나 elastic.co에서 직접 제공하는 클라우드 서비스와 비교하여 어떤 장단점이 있을까요?
+  * AWS의 ElasticSearch Service는 관리형 서비스입니다.
+  * 설치형과 달리 버그,보안 픽스에 대한 업그레이드가 필요하지 않습니다.
+  * elastic.co 에서 제공하는 서비스도 역시 관리형이지만 신규 배포를 생성할 시 항상 최신버전을 사용합니다.
+  * AWS ElasticSearch에서는 다양한 버젼의 클러스터를 제공합니다. 
+  * AWS 의 IAM을 통한 접근제어와 SAML, LDAP 등 다양한 보안 기능을 제공합니다.
+  * VPC와 연동하여 클라우드 내부에서 사용이 가능합니다.
+  
 * Grafana의 Panel 형식에는 어떤 것이 있을까요? 로그를 보기에 적합한 판넬은 어떤 형태일까요?
+  * Grafana 에는 대표적으로 Graph, Stat, Logs, Gauge, Table 등 이 있습니다.
+로그는 Logs 판넬을 통해서 텍스트로 로그의 내용을 확인하는 방법이 적합합니다.
+또한 로그의 내용을 기반으로 다른 판넬을 구성하여 데이터를 시각화할 수 있습니다.
 
 ## Quest
 * 우리의 웹 서버, S3, Cloudfront, VPC, ELB 등이 로그를 남기도록 해 보세요.
@@ -34,3 +44,12 @@
 
 ## Advanced
 * ElasticSearch와 Grafana는 어떤 라이센스로 배포되고 있을까요? AWS와 같은 클라우드 제공자들이 이러한 오픈소스를 서비스화 하는 것을 둘러싼 논란은 어떤 논점일까요?
+  * 기존의 ElasticSearch 는 오픈 소스로 운영 되었습니다.
+하지만 Elastic 과 AWS의 분쟁으로 인해서 라이센스 정책이 달라지게 되었습니다.
+  * Apache 2.0 라이센스로 운영 되던 중 AWS 에서 Elastic 의 독점 코드를 우려하여 Open Distro for Elasticsearch 를 공개하였습니다.
+  * Elastic 은 이에 대응하여 SSPL과 Elastic 라이센스로 변경하겠다고 발표했습니다.
+이로 인해서 결과적으로 Elasticsearch 는 오픈소스가 아니게 되었습니다.
+
+  * AWS Elasticsearch = Apache 2.0
+  * Elasticsearch = SSPL or Elastic
+  * Grafana 의 라이센스는 현재 AGPLv3 입니다. AGPLv3 는 오픈소스로 인정된 라이센스입니다.
